@@ -11,8 +11,8 @@ The goal of this repository is to build a strong foundation in SQL and progressi
 
 | Day   | Topics                                                                                  | Status         |
 | ----- | --------------------------------------------------------------------------------------- | -------------- |
-| Day 1 | SQL Basics, DDL, DML, SELECT, Filtering, Sorting, Aggregations, GROUP BY, HAVING, Joins | 🔄 In Progress |
-| Day 2 | Window Functions, Views, Indexes                                                        | ⏳ Upcoming     |
+| Day 1 | SQL Basics, DDL, DML, SELECT, Filtering, Sorting, Aggregations, GROUP BY, HAVING, Joins | Cpmpleted |
+| Day 2 | Window Functions, Views, Indexes                                                        | Completed   |
 | Day 3 | CTEs, Subqueries                                                                        | ⏳ Upcoming     |
 | Day 4 | Database Normalization & Database Design                                                | ⏳ Upcoming     |
 | Day 5 | SQL Project                                                                             | ⏳ Upcoming     |
@@ -31,7 +31,7 @@ SQL/
 │   └── README.md
 │
 ├── day-2/
-│   ├── file.sql
+│   ├── Winodow_Function_Index.sql
 │   └── README.md
 │
 ├── day-3/
@@ -249,8 +249,8 @@ Some syntax may differ between PostgreSQL, MySQL, SQL Server, and Oracle.
 # 📈 Progress
 
 ```text
-Day 1  ██████████░░  SQL Fundamentals
-Day 2  ░░░░░░░░░░░░  Window Functions / Views / Indexes
+Day 1  ████████████  SQL Fundamentals
+Day 2  ████████████  Window Functions / Views / Indexes
 Day 3  ░░░░░░░░░░░░  CTEs / Subqueries
 Day 4  ░░░░░░░░░░░░  Normalization / Database Design
 Day 5  ░░░░░░░░░░░░  Project
@@ -296,7 +296,7 @@ Potential topics to add later:
 
 * [x] Repository setup
 * [x] Day 1 — SQL Basics
-* [ ] Day 2 — Window Functions, Views & Indexes
+* [x] Day 2 — Window Functions, Views & Indexes
 * [ ] Day 3 — CTEs & Subqueries
 * [ ] Day 4 — Normalization & Database Design
 * [ ] Day 5 — SQL Project
