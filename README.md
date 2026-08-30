@@ -7,15 +7,15 @@ The goal of this repository is to build a strong foundation in SQL and progressi
 
 ---
 
-## 📚 Learning Roadmap
+## Learning Roadmap
 
 | Day   | Topics                                                                                  | Status         |
 | ----- | --------------------------------------------------------------------------------------- | -------------- |
 | Day 1 | SQL Basics, DDL, DML, SELECT, Filtering, Sorting, Aggregations, GROUP BY, HAVING, Joins | Cpmpleted |
-| Day 2 | Window Functions, Views, Indexes                                                        | Completed   |
-| Day 3 | CTEs, Subqueries                                                                        | ⏳ Upcoming     |
-| Day 4 | Database Normalization & Database Design                                                | ⏳ Upcoming     |
-| Day 5 | SQL Project                                                                             | ⏳ Upcoming     |
+| Day 2 | Window Functions, Views, Indexes                                                        | Completed |
+| Day 3 | CTEs, Subqueries                                                                        | Completed |
+| Day 4 | Database Normalization & Database Design                                                | Upcoming     |
+| Day 5 | SQL Project                                                                             | Upcoming     |
 
 ---
 
@@ -54,7 +54,7 @@ Each day contains:
 
 ---
 
-# 🗓️ Day 1 — SQL Basics
+# Day 1 — SQL Basics
 
 ### Topics Covered
 
@@ -112,7 +112,7 @@ Each day contains:
 
 ---
 
-# 🗓️ Day 2 — Advanced SQL
+# Day 2 — Advanced SQL
 
 ### Topics
 
@@ -141,7 +141,7 @@ Each day contains:
 
 ---
 
-# 🗓️ Day 3 — Querying Techniques
+# Day 3 — Querying Techniques
 
 ### Topics
 
@@ -163,7 +163,7 @@ Each day contains:
 
 ---
 
-# 🗓️ Day 4 — Database Design
+# Day 4 — Database Design
 
 ### Topics
 
@@ -193,7 +193,7 @@ Each day contains:
 
 ---
 
-# 🗓️ Day 5 — SQL Project
+# Day 5 — SQL Project
 
 The final stage will combine the concepts learned throughout the previous days into a practical SQL project.
 
@@ -219,7 +219,7 @@ The final stage will combine the concepts learned throughout the previous days i
 
 ---
 
-# 🎯 Learning Goals
+# Learning Goals
 
 By completing this repository, I aim to be able to:
 
@@ -236,7 +236,7 @@ By completing this repository, I aim to be able to:
 
 ---
 
-# 🛠️ Database
+# Database
 
 The examples and practice queries in this repository primarily use:
 
@@ -246,19 +246,19 @@ Some syntax may differ between PostgreSQL, MySQL, SQL Server, and Oracle.
 
 ---
 
-# 📈 Progress
+# Progress
 
 ```text
 Day 1  ████████████  SQL Fundamentals
 Day 2  ████████████  Window Functions / Views / Indexes
-Day 3  ░░░░░░░░░░░░  CTEs / Subqueries
+Day 3  ████████████  CTEs / Subqueries
 Day 4  ░░░░░░░░░░░░  Normalization / Database Design
 Day 5  ░░░░░░░░░░░░  Project
 ```
 
 ---
 
-## 🧠 Approach
+## Approach
 
 This repository follows a **learn → write → practice → apply** approach.
 
@@ -292,12 +292,12 @@ Potential topics to add later:
 
 ---
 
-## 📌 Progress Tracking
+##  Progress Tracking
 
 * [x] Repository setup
 * [x] Day 1 — SQL Basics
 * [x] Day 2 — Window Functions, Views & Indexes
-* [ ] Day 3 — CTEs & Subqueries
+* [x] Day 3 — CTEs & Subqueries
 * [ ] Day 4 — Normalization & Database Design
 * [ ] Day 5 — SQL Project
 * [ ] Final review & interview practice
