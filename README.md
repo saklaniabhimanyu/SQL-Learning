@@ -14,8 +14,8 @@ The goal of this repository is to build a strong foundation in SQL and progressi
 | Day 1 | SQL Basics, DDL, DML, SELECT, Filtering, Sorting, Aggregations, GROUP BY, HAVING, Joins | Cpmpleted |
 | Day 2 | Window Functions, Views, Indexes                                                        | Completed |
 | Day 3 | CTEs, Subqueries                                                                        | Completed |
-| Day 4 | Database Normalization & Database Design                                                | Upcoming     |
-| Day 5 | SQL Project                                                                             | Upcoming     |
+| Day 4 | Database Normalization & Database Design                                                | Completed |
+| Day 5 | SQL Project                                                                             | Upcoming  |
 
 ---
 
@@ -35,11 +35,11 @@ SQL/
 │   └── README.md
 │
 ├── day-3/
-│   ├── file.sql
+│   ├── SQL_CTE_Subqueries.sql
 │   └── README.md
 │
 ├── day-4/
-│   ├── file.sql
+│   ├── normalization.sql
 │   └── README.md
 │
 └── day-5/
@@ -252,7 +252,7 @@ Some syntax may differ between PostgreSQL, MySQL, SQL Server, and Oracle.
 Day 1  ████████████  SQL Fundamentals
 Day 2  ████████████  Window Functions / Views / Indexes
 Day 3  ████████████  CTEs / Subqueries
-Day 4  ░░░░░░░░░░░░  Normalization / Database Design
+Day 4  ████████████  Normalization / Database Design
 Day 5  ░░░░░░░░░░░░  Project
 ```
 
@@ -298,7 +298,7 @@ Potential topics to add later:
 * [x] Day 1 — SQL Basics
 * [x] Day 2 — Window Functions, Views & Indexes
 * [x] Day 3 — CTEs & Subqueries
-* [ ] Day 4 — Normalization & Database Design
+* [x] Day 4 — Normalization & Database Design
 * [ ] Day 5 — SQL Project
 * [ ] Final review & interview practice
 
