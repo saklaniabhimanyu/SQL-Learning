@@ -1,21 +1,24 @@
 # SQL Revision & Practice
-- Abhimanyu Saklani
 
-A structured SQL learning repository covering **SQL fundamentals, advanced SQL concepts, database design, and practical projects**.
+* Author - Abhimanyu Saklani
 
-The goal of this repository is to build a strong foundation in SQL and progressively move toward advanced querying and real-world database problem solving.
+A structured PostgreSQL revision repository covering **SQL fundamentals, advanced querying, database design, transactions, and advanced PostgreSQL features**.
+
+The goal of this repository is to build a strong foundation in SQL and progressively move toward advanced querying, database design, performance, and real-world database problem solving.
 
 ---
 
 ## Learning Roadmap
 
-| Day   | Topics                                                                                  | Status         |
-| ----- | --------------------------------------------------------------------------------------- | -------------- |
-| Day 1 | SQL Basics, DDL, DML, SELECT, Filtering, Sorting, Aggregations, GROUP BY, HAVING, Joins | Cpmpleted |
+| Day   | Topics                                                                                  | Status    |
+| ----- | --------------------------------------------------------------------------------------- | --------- |
+| Day 1 | SQL Basics, DDL, DML, SELECT, Filtering, Sorting, Aggregations, GROUP BY, HAVING, Joins | Completed |
 | Day 2 | Window Functions, Views, Indexes                                                        | Completed |
 | Day 3 | CTEs, Subqueries                                                                        | Completed |
 | Day 4 | Database Normalization & Database Design                                                | Completed |
-| Day 5 | SQL Project                                                                             | Upcoming  |
+| Day 5 | SQL Functions, Procedures, UPSERT & Advanced SQL Operations                             | Completed |
+| Day 6 | Transactions & ACID Properties                                                          | Upcoming  |
+| Day 7 | Triggers, Materialized Views & Temporary Tables                                         | Upcoming  |
 
 ---
 
@@ -27,23 +30,31 @@ SQL/
 ├── README.md
 │
 ├── day-1/
-│   ├── SQL_Basics.sql
+│   ├── sql-basics.sql
 │   └── README.md
 │
 ├── day-2/
-│   ├── Winodow_Function_Index.sql
+│   ├── window-functions-views-indexes.sql
 │   └── README.md
 │
 ├── day-3/
-│   ├── SQL_CTE_Subqueries.sql
+│   ├── cte-subqueries.sql
 │   └── README.md
 │
 ├── day-4/
 │   ├── normalization.sql
 │   └── README.md
 │
-└── day-5/
-    ├── project.sql
+├── day-5/
+│   ├── functions-procedures-upsert.sql
+│   └── README.md
+│
+├── day-6/
+│   ├── transactions-acid.sql
+│   └── README.md
+│
+└── day-7/
+    ├── triggers-materialized-views-temp-tables.sql
     └── README.md
 ```
 
@@ -51,7 +62,6 @@ Each day contains:
 
 * **SQL file** → Queries, examples, and practice
 * **README.md** → Concepts, syntax, explanations, and important notes
-
 ---
 
 # Day 1 — SQL Basics
@@ -112,7 +122,7 @@ Each day contains:
 
 ---
 
-# Day 2 — Advanced SQL
+# Day 2 — Window Functions, Views & Indexes
 
 ### Topics
 
@@ -121,27 +131,40 @@ Each day contains:
   * `ROW_NUMBER()`
   * `RANK()`
   * `DENSE_RANK()`
+  * `NTILE()`
   * `LAG()`
   * `LEAD()`
   * `FIRST_VALUE()`
   * `LAST_VALUE()`
   * `PARTITION BY`
   * `ORDER BY` inside windows
+  * Window frames
+  * Running totals
+  * Top-N per group
+  * Aggregate window functions
 * Views
 
   * Creating views
-  * Updating/removing views
-  * Use cases
+  * Replacing views
+  * Dropping views
+  * Views with joins
+  * Views with aggregation
 * Indexes
 
-  * What is an index?
   * Creating indexes
-  * Benefits and drawbacks
-  * When to use indexes
+  * Composite indexes
+  * Partial indexes
+  * Unique indexes
+  * Dropping indexes
+  * Index benefits and drawbacks
+* Query Performance
+
+  * `EXPLAIN`
+  * `EXPLAIN ANALYZE`
 
 ---
 
-# Day 3 — Querying Techniques
+# Day 3 — CTEs & Subqueries
 
 ### Topics
 
@@ -150,72 +173,184 @@ Each day contains:
   * Scalar subqueries
   * Single-row subqueries
   * Multi-row subqueries
+  * Subqueries in `WHERE`
+  * Subqueries in `SELECT`
+  * Subqueries in `FROM`
+  * Subqueries in `HAVING`
   * Correlated subqueries
+  * Nested subqueries
   * `IN`
+  * `NOT IN`
   * `EXISTS`
-* Common Table Expressions (CTEs)
+  * `NOT EXISTS`
+  * `ANY`
+  * `ALL`
+* Common Table Expressions
 
   * `WITH`
   * Multiple CTEs
+  * CTEs with joins
+  * CTEs with aggregation
+  * CTEs with window functions
   * Recursive CTEs
 * CTE vs Subquery
-* Practical query optimization
+* CTE vs Temporary Table
+* Practical SQL interview patterns
 
 ---
 
-# Day 4 — Database Design
+# Day 4 — Database Design & Normalization
 
 ### Topics
 
 * Database Design
 * Data Redundancy
+* Functional Dependencies
 * Data Anomalies
 
   * Insert anomaly
   * Update anomaly
   * Delete anomaly
+* Keys
+
+  * Super Keys
+  * Candidate Keys
+  * Primary Keys
+  * Alternate Keys
+  * Composite Keys
+  * Foreign Keys
 * Normalization
 
   * 1NF — First Normal Form
   * 2NF — Second Normal Form
   * 3NF — Third Normal Form
   * BCNF
-* Primary Keys
-* Candidate Keys
-* Composite Keys
-* Foreign Keys
+* Partial Dependency
+* Transitive Dependency
 * Relationships
 
   * One-to-One
   * One-to-Many
   * Many-to-Many
-* Entity Relationship concepts
+* Entity-Relationship concepts
+* Normalization vs Denormalization
+* Practical relational schema design
+
+---
+# Day 5 — SQL Functions, Procedures & UPSERT
+
+### Topics
+
+* Conditional Expressions
+
+  * `CASE`
+  * `COALESCE`
+  * `NULLIF`
+  * `CAST`
+* String Functions
+* Date & Time Functions
+* Mathematical Functions
+* Conditional Aggregation
+* `FILTER`
+* Set Operations
+
+  * `UNION`
+  * `UNION ALL`
+  * `INTERSECT`
+  * `EXCEPT`
+* PostgreSQL `DISTINCT ON`
+* `RETURNING`
+
+  * `INSERT ... RETURNING`
+  * `UPDATE ... RETURNING`
+  * `DELETE ... RETURNING`
+* `ON CONFLICT`
+* UPSERT
+* User-Defined Functions
+
+  * `CREATE FUNCTION`
+  * Function parameters
+  * Return values
+  * SQL functions
+  * PL/pgSQL functions
+  * Table-returning functions
+* Stored Procedures
+
+  * `CREATE PROCEDURE`
+  * Parameters
+  * `CALL`
+* Functions vs Procedures
 
 ---
 
-# Day 5 — SQL Project
+# Day 6 — Transactions & ACID
 
-The final stage will combine the concepts learned throughout the previous days into a practical SQL project.
+### Topics
 
-### Project will include
+* Database Transactions
+* Transaction Lifecycle
+* `BEGIN`
+* `COMMIT`
+* `ROLLBACK`
+* `SAVEPOINT`
+* `ROLLBACK TO SAVEPOINT`
+* `RELEASE SAVEPOINT`
+* ACID Properties
 
-* Database design
-* Multiple related tables
-* Primary & foreign keys
-* Constraints
-* Data insertion
-* Data cleaning
-* Joins
-* Aggregate functions
-* `GROUP BY`
-* `HAVING`
-* Subqueries
-* CTEs
-* Window functions
-* Views
-* Indexes
-* Business-oriented SQL queries
-* Analysis and insights
+  * Atomicity
+  * Consistency
+  * Isolation
+  * Durability
+* Transaction Isolation Levels
+
+  * `READ COMMITTED`
+  * `REPEATABLE READ`
+  * `SERIALIZABLE`
+* Concurrency
+* Transaction Conflicts
+* Dirty Reads
+* Non-Repeatable Reads
+* Phantom Reads
+* Lost Updates
+* Row-Level Locking
+
+  * `FOR UPDATE`
+  * `FOR SHARE`
+* Autocommit
+
+---
+
+# Day 7 — Advanced PostgreSQL
+
+### Topics
+
+* Triggers
+
+  * `CREATE TRIGGER`
+  * `CREATE FUNCTION` for triggers
+  * `BEFORE` triggers
+  * `AFTER` triggers
+  * `INSTEAD OF` triggers
+  * Row-level triggers
+  * Statement-level triggers
+  * `OLD` and `NEW`
+  * Trigger use cases
+  * Dropping triggers
+* Materialized Views
+
+  * `CREATE MATERIALIZED VIEW`
+  * `REFRESH MATERIALIZED VIEW`
+  * Materialized views vs views
+  * Indexes on materialized views
+  * Dropping materialized views
+* Temporary Tables
+
+  * `CREATE TEMP TABLE`
+  * Temporary table scope
+  * Temporary tables with queries
+  * Temporary tables vs CTEs
+  * Temporary tables vs regular tables
+  * Dropping temporary tables
 
 ---
 
@@ -224,15 +359,20 @@ The final stage will combine the concepts learned throughout the previous days i
 By completing this repository, I aim to be able to:
 
 * Write SQL queries confidently
-* Design relational databases
+* Design normalized relational databases
 * Work with multiple related tables
 * Perform data aggregation and analysis
 * Write complex queries using CTEs and subqueries
 * Use window functions for analytical problems
-* Understand database normalization
+* Create and use SQL functions and procedures
+* Handle UPSERT and advanced DML operations
+* Understand database transactions and ACID properties
 * Understand indexes and query performance
+* Work with PostgreSQL triggers
+* Use materialized views for stored query results
+* Work with temporary tables
 * Solve SQL interview problems
-* Apply SQL to real-world datasets and projects
+* Apply PostgreSQL to real-world datasets and projects
 
 ---
 
@@ -253,7 +393,9 @@ Day 1  ████████████  SQL Fundamentals
 Day 2  ████████████  Window Functions / Views / Indexes
 Day 3  ████████████  CTEs / Subqueries
 Day 4  ████████████  Normalization / Database Design
-Day 5  ░░░░░░░░░░░░  Project
+Day 5  ████████████  Functions / Procedures / UPSERT
+Day 6  ░░░░░░░░░░░░  Transactions / ACID
+Day 7  ░░░░░░░░░░░░  Triggers / Materialized Views / Temp Tables
 ```
 
 ---
@@ -270,37 +412,16 @@ Each topic is documented with:
 4. Practice queries
 5. Real-world use cases
 
-The final project will bring the concepts together into one practical database and analysis workflow.
+The repository focuses on **SQL revision and PostgreSQL concepts**
 
 ---
-
-## 🚀 Future Additions
-
-Potential topics to add later:
-
-* Transactions
-* ACID Properties
-* Stored Procedures
-* Functions
-* Triggers
-* Query Optimization
-* `EXPLAIN` / `EXPLAIN ANALYZE`
-* Database Transactions
-* Advanced PostgreSQL features
-* SQL Interview Questions
-* LeetCode / HackerRank SQL Practice
-
----
-
-##  Progress Tracking
+## Progress Tracking
 
 * [x] Repository setup
 * [x] Day 1 — SQL Basics
 * [x] Day 2 — Window Functions, Views & Indexes
 * [x] Day 3 — CTEs & Subqueries
 * [x] Day 4 — Normalization & Database Design
-* [ ] Day 5 — SQL Project
-* [ ] Final review & interview practice
-
-```
-```
+* [x] Day 5 — Functions, Procedures & UPSERT
+* [ ] Day 6 — Transactions & ACID
+* [ ] Day 7 — Triggers, Materialized Views & Temporary Tables 
