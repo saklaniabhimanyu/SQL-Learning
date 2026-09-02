@@ -17,7 +17,7 @@ The goal of this repository is to build a strong foundation in SQL and progressi
 | Day 3 | CTEs, Subqueries                                                                        | Completed |
 | Day 4 | Database Normalization & Database Design                                                | Completed |
 | Day 5 | SQL Functions, Procedures, UPSERT & Advanced SQL Operations                             | Completed |
-| Day 6 | Transactions & ACID Properties                                                          | Upcoming  |
+| Day 6 | Transactions & ACID Properties                                                          | Completed  |
 | Day 7 | Triggers, Materialized Views & Temporary Tables                                         | Upcoming  |
 
 ---
@@ -394,7 +394,7 @@ Day 2  ████████████  Window Functions / Views / Indexes
 Day 3  ████████████  CTEs / Subqueries
 Day 4  ████████████  Normalization / Database Design
 Day 5  ████████████  Functions / Procedures / UPSERT
-Day 6  ░░░░░░░░░░░░  Transactions / ACID
+Day 6  ████████████  Transactions / ACID
 Day 7  ░░░░░░░░░░░░  Triggers / Materialized Views / Temp Tables
 ```
 
@@ -423,5 +423,5 @@ The repository focuses on **SQL revision and PostgreSQL concepts**
 * [x] Day 3 — CTEs & Subqueries
 * [x] Day 4 — Normalization & Database Design
 * [x] Day 5 — Functions, Procedures & UPSERT
-* [ ] Day 6 — Transactions & ACID
+* [x] Day 6 — Transactions & ACID
 * [ ] Day 7 — Triggers, Materialized Views & Temporary Tables 
